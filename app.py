@@ -23,7 +23,7 @@ def generate_gemini_content(transcript_text,prompt):
     response=model.generate_content(prompt+transcript_text)
     return response.text
 
-with open('properties/style.css') as f:
+with open('style.css') as f:
    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 st.title("Youtube Transcript To Detailed Notes Converter")
 youtube_link=st.text_input("Enter Youtube video link: ")
